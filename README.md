@@ -106,10 +106,13 @@ A voir dans le fichier correspondant.
 
 Tout est basé sur GoogleDuo qui est lancé en même temps que le programme.
 Il doit être paramétré avec un compte spécifique pour la personne. Rassurez-vous, pas besoin de numéro de portable, une adresse mail suffit.
-Pour l'appeler, il suffira donc d'utiliser GoogleDuo et d'appeler via l'e-mail : hyper simple pour la famille ! ;-)
-Lors d'un appel entrant, GoogleDuo génère une notification (il faut bien les autoriser dans Chromium !  cf "Les pré-requis")
+Pour l'appeler, il suffira donc d'utiliser GoogleDuo et d'appeler via l'e-mail : hyper simple pour la famille ! ;-).
+
+Lors d'un appel entrant, GoogleDuo génère une notification (il faut bien les autoriser dans Chromium !  (cf "Les pré-requis").
 Toutes les 3 secondes, le Raspberry va capturer la zone d'écran ou apparaissent les notifications, et, via une reconnaissance de caractère, il pourra détecter une notification GoogleDuo ... voilà c'est ça l'astuce ! ;-)
+
 Ensuite, c'est juste des boites de dialogue et des simulations de clics pour accepter ou refuser un appel.
+
 Pour détecter la fin d'un appel, c'est la même astuce : le texte de la fenetre GoogleDuo change "Appel Vidéo Duo" ou "Démarrer un appel". Il suffit de scruter la bonne zone d'écran pour détecter si l'appel est fini.
 
 
