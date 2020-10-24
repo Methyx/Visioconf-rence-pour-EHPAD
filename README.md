@@ -28,6 +28,7 @@ Par contre, pour l'instant, il est impossible pour le senior de lancer lui-même
 - 1 cable mini HDMI - HDMI  (attention à bien prendre un cable de qualité "vidéo" et pas "informatique", car tous les cables ne sont pas compatibles avec les signaux CEC pour commander la télé)
 - 1 webcam USB
 
+Voir le fichier "Installation Materielle.rtf" pour tous les détails
 
 === Le fonctionnement :
 
@@ -86,6 +87,7 @@ L'appui sur la touche END permet de mettre fin au programme.
 
 === Fichier "Parametres.txt"
 
+Ce fichier est disponible en téléchargement.
 Ce fichier (commenté) permet de régler différents paramètres du programme.
 Il doit IMPERATIVEMENT être placé dans le répertoire /home/pi/Documents/
 
@@ -112,7 +114,7 @@ Quelques paramètres du Raspberry à régler.
 Quelques fichiers à copier
 ** Important : Le raspberry doit être configuré avec une résolution de 1280 x 720 ** (cf section "comment ça marche")
 
---> Détails dans le fichier "Installation Logicielle (Git).rtf"
+--> Tous les détails dans le fichier "Installation Logicielle (Git).rtf"
 
 Branchement des accessoires :
 - LED rouge = GPIO 16
