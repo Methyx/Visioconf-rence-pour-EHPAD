@@ -85,6 +85,8 @@ L'appui sur la touche END permet de mettre fin au programme.
 === Fichier "Parametres.txt"
 
 Ce fichier (commenté) permet de régler différents paramètres du programme.
+Il doit IMPERATIVEMENT être placé dans le répertoire /home/pi/Documents/
+
 Attention à bien respecter les règles suivantes :
 Les lignes commençant par "#" sont des commentaires, pour expliquer le paramètre qui suit. Elles sont ignorées par le programme.
 Sur la ligne suivante vient le nom du paramètre : Il ne faut PAS le modifier !!
