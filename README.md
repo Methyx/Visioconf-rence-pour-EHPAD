@@ -112,7 +112,9 @@ Quelques paramètres du Raspberry à régler.
 ** Important : Le raspberry doit être configuré avec une résolution de 1280 x 720 ** (cf section "comment ça marche")
 --> Détails dans le fichier correpondant
 
-Les fichiers 'Screens' doivent être placés dans le répertoire /home/pi/Documents/Screens/
+Les fichiers 'Screens' doivent être placés dans le répertoire /home/pi/Documents/Screens/.
+
+Créer un répertoire /home/pi/Documents/Screenshots/
 
 Branchement des accessoires :
 - LED rouge = GPIO 16
