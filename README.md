@@ -1,7 +1,8 @@
 # Visioconference-pour-EHPAD
 Une Box pour faire des visioconférences avec des personnes âgées dépendantes.
 
-Le principe :
+
+=== Le principe :
 
 Une box à base de Raspberry Pi qui se connecte sur une télé en HDMI dans la chambre d'une personne agée dépendante.
 On peut alors l'appeler, via GoogleDuo, et elle n'a rien à faire pour décrocher.
@@ -10,7 +11,8 @@ Un soignant a également la possibilité de bloquer les appels pendant 15 min à
 La box est active dans une plage horaire paramétrable (par exemple de 10h00 à 19h00).
 Elle peut également faire cadre photo.
 
-Le matériel :
+
+=== Le matériel :
 
 - Un Raspberry Pi V4B 2 Go, carte SD 32 Go
 - Un plateforme Grove Base pour Raspberry : https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/
@@ -22,11 +24,14 @@ Le matériel :
 - 1 cable mini HDMI - HDMI  (attention à bien prendre un cable de qualité "vidéo" et pas "informatique", car tous les cables ne sont pas compatibles avec les signaux CEC pour commander la télé)
 - 1 webcam USB
 
-Le fonctionnement :
+
+=== Le fonctionnement :
 
 2 modes de fonctionnement sont possibles.
 
 1) La Box est raccordée à une télé "dédiée" à la visio (petite télé ~20" que l'on peut trouver à ~ 100 EUR) : mode Cadre Photos
+
+Ce mode est utile si la "vraie" TV de la personne ne possède pas de prise HDMI, ou si la fonction "Cadre Photos" vous intéresse.
 La télé est automatiquement allumée à l'heure programmée, et lance un diaporama aléatoire des photos présentes dans un répertoire (paramétrable).
 La durée de transition entre les photos est paramétrable.
 Seules les photos .jpg  sont prises en compte. 
@@ -36,26 +41,46 @@ Avant et après un appel, il est possible d'envoyer un signal IR de "MUTE" afin 
 La télé est automatiquement éteinte à l'heure programmée de mise en veille.
  
 2) La Box est raccordée à la télé principale de la personne : mode TV
+
 Il n'y a alors pas de gestion ON/OFF de la TV aux heures programmées.
-Par contre la TV sera allumée, si elle est éteinte, lors d'un appel (ou appui sur un bouton menu).
+Par contre, si elle est éteinte, la TV sera allumée lors d'un appel (ou appui sur un bouton menu).
 En cas d'appel (ou appui sur un bouton menu), la TV bascule automatiquement sur l'entrée HDMI du raspberry (paramétrable).
 En fin d'appel, la TV est rebasculée automatiquement sur l'entrée TV.
-Le diaporama est inutile dans ce mode. 
+Le diaporama est donc inutile dans ce mode. 
+
+Dans les 2 modes :
+
+Les commandes ON/OFF de la télé sur laquelle est branchée le Raspberry se font par les commandes CEC de l'HDMI.
+*** Attention à vérifier que la télé est bien compatible avec le CEC (qui s'appelle différemment selon les marques de télé !) ***
+Par contre, pour les passages en entrée HDMI ou TV, j'ai pu constater que toutes les télés ne sont pas complètement compatibles avec la norme CEC ... :-(
+Il est donc possible d'envoyer des commandes infrarouges pour ces actions.
+Il faudra alors enregistrer les commandes correspondantes avec la télécommande d'origine (via irrecord), et indiquer les commandes à lancer dans le fichier paramètres.
+
+L'insertion d'une clé USB est détectée (pendant les heures de "réveil") pour ajouter des photos au diaporama. On peut alors choisir, à l'aide des boutons bleu (Navigation) et jaune (Validation) le répertoire de la clé qui contient les fichiers .jpg. Après validation, ils sont automatiquement copiés dans le répertoire correspondant du Raspberry.
+
+Lors d'un appel, une boite de dialogue apparait pendant 15 secondes et permet, en appuyant sur le bouton rouge, de refuser un appel entrant.
+
+Pendant les heures de "réveil", un appui sur le bouton rouge fait apparaitre un menu de "blocage des appels". A l'aide des boutons bleu (Navigation) et jaune (Validation), on peut choisir la durée de blocage (15, 30, 45 ou 60 minutes). Le Raspberry refusera alors tous les appels entrants pendant cette période. Le bouton rouge reste allumé pendant toute la durée du blocage.
+
+Pendant les heures de "réveil", un appui sur le bouton bleu fait apparaitre un menu "système". Il est alors possible de choisir quelques commandes système : quitter, reboot, ...
+
+Un journal d'appel est enregistré, et conservé, automatiquement : appels reçus, accepté / refusé, durée de l'appel
+
+Un journal système est également créé. Il est réinitialisé à chaque démarrage du programme (mais la version précédente est sauvegardée).
 
 
-En cas de télé dédiée, il y a possibilité d'activer un diaporama de photos.
-Lorsqu'un appel est reçu, la télé s'allume (si éteinte) et bascule automatiquement sur l'entrée HDMI du Raspberry.
-Une boite de dialogue apparait pendant 15 secondes et permet à un soignant présent dans la chambre de refuser l'appel en appuyant sur le bouton rouge
-Sinon, l'appel est accepté automatiquement (sans aucune intervention de la personne agée) au bout de 15 secondes environ.
-En fin d'appel, la télé est automatiquement remise sur l'entrée TV, ou le diaporama photo reprend.
-Il y a aussi la possibilité de 
+=== Gestion à distance :
 
-Les principales fonctions :
-- Programmation des heures de "veille" : par exemple de 10h00 à 19h00
-- Diaporama photos possible (dans le cas ou le Raspberry est branché sur une télé dédié)
-- Commande de la télé via CEC (HDMI) ou Infrarouge (un enregistrement de la télécommande via "irrecord" est nécessaire). Le CEC est toujours nécessaire pour la gestion ON/OFF de la télé (car il est impossible de connaitre l'état de la télé en cas de commande IR), mais la commande IR est possible pour le passage HDMI / TV, car j'ai pu constater que les commandes CEC de changement de source ne sont pas compatibles avec toutes les télés, contrairement au ON/OFF
-- Pendant un appel, envoi d'une commande "Mute" à la télé (via IR), dans le cas d'un fonctionnement sur un écran dédié (car la "vraie" télé est souvent allumée, et le son souvent fort ;-)). Evidement, à la fin de l'appel, la commande "Mute" est renvoyée pour remettre le son de la télé.
-- Détection de l'insertion d’une clé USB pour gérer le chargement de photos du cadre photos (via un menu, toujours avec les boutons bleu (navigation) et jaune (validation))
-- Un menu "systeme" accessible par appui direct sur le bouton bleu
-- Un journal d'appels
-- Un journal système, réinitialisé à chaque démarrage
+En cas d'accès au Raspberry via VNC à distance, il est possible de "simuler" des actions sur les boutons à l'aide du clavier :
+"r" pour le bouton rouge
+"b" pour le bouton bleu
+"j" pour le bouton jaune
+Dans les menus, il suffit d'utiliser la flèche vers le bas pour Naviguer et la touche Entrée pour Valider
+L'appui sur la touche ESC permet de basculer en mode plein écran ou pas (utile pour accéder à des commandes du Raspberry)
+L'appui sur la touche END permet de mettre fin au programme
+
+
+=== Fichier "paramatres.txt"
+
+
+
