@@ -105,6 +105,7 @@ Si vous ne respectez pas exactement l'une de ces 3 valeurs, le paramètre ne ser
 Installer et paramétrer GoogleDuo.
 Quelques bibliothèques à installer.
 Quelques paramètres du Raspberry à régler.
+** Important : Le raspberry doit être configuré avec une résolution de 1280 x 720 ** (cf section "comment ça marche")
 --> Détails dans le fichier correpondant
 
 Branchement des accessoires :
@@ -131,5 +132,7 @@ Toutes les 3 secondes, le Raspberry va capturer la zone d'écran ou apparaissent
 Ensuite, c'est juste des boites de dialogue et des simulations de clics pour accepter ou refuser un appel.
 
 Pour détecter la fin d'un appel, c'est la même astuce : le texte de la fenetre GoogleDuo change "Appel Vidéo Duo" ou "Démarrer un appel". Il suffit de scruter la bonne zone d'écran pour détecter si l'appel est fini.
+
+Juste une contrainte : le Raspberry doit être configuré dans une résolution de 1280 x 720, car sinon, les coordonnées des captures et des clics ne seront plus corrects !
 
 
