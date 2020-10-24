@@ -1,5 +1,5 @@
 # Visioconference-pour-EHPAD
-Une Box à base de Raspberry Pi pour faire des visioconférences avec des personnes âgées dépendantes
+Une Box à base de Raspberry Pi pour faire des visioconférences avec des personnes âgées dépendantes.
 
 Le principe :
 Une box qui se connecte sur une télé en HDMI (écran télé dédié pour la visio, ou télé "normale" de la personne)
