@@ -28,7 +28,10 @@ Par contre, pour l'instant, il est impossible pour le senior de lancer lui-même
 - 1 cable mini HDMI - HDMI  (attention à bien prendre un cable de qualité "vidéo" et pas "informatique", car tous les cables ne sont pas compatibles avec les signaux CEC pour commander la télé)
 - 1 webcam USB
 
-Voir le fichier "Installation Materielle.rtf" pour tous les détails
+--> Voir le fichier "Installation Materielle.rtf" pour tous les détails.
+
+--> Les 6 fichiers STL du boitier (6 faces) sont dans le fichier "Boitier_KIT_Box_STL.zip"
+
 
 === Le fonctionnement :
 
