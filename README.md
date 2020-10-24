@@ -72,15 +72,26 @@ Un journal système est également créé. Il est réinitialisé à chaque déma
 === Gestion à distance :
 
 En cas d'accès au Raspberry via VNC à distance, il est possible de "simuler" des actions sur les boutons à l'aide du clavier :
-"r" pour le bouton rouge
-"b" pour le bouton bleu
-"j" pour le bouton jaune
+"r" pour le bouton rouge  /  "b" pour le bouton bleu  /  "j" pour le bouton jaune
 Dans les menus, il suffit d'utiliser la flèche vers le bas pour Naviguer et la touche Entrée pour Valider
 L'appui sur la touche ESC permet de basculer en mode plein écran ou pas (utile pour accéder à des commandes du Raspberry)
 L'appui sur la touche END permet de mettre fin au programme
 
 
-=== Fichier "paramatres.txt"
+=== Fichier "Parametres.txt"
 
+Ce fichier (commenté) permet de régler différents paramètres du programme.
+Attention à bien respecter les règles suivantes :
+Les lignes commençant par "#" sont des commentaires, pour expliquer le paramètre qui suit. Elles sont ignorées par le programme
+Sur la ligne suivante vient le nom du paramètre : Il ne faut PAS le modifier !!
+Sur la ligne suivante vient la valeur du paramètre : Elle est précédée de plusieurs espaces (c'est juste pour la lisibilité, ils seront ignorés par le programme). La valeur est soit un chiffre, soit codifiée comme expliquée dans les commentaires qui précèdent. Attention de bien respecter la casse des valeurs attendues !!
 
+Par exemple, le paramètre 'Demarrage' :
+3 valeurs sont possibles : 'Raspberry'  ou  'Visio'  ou  'Photos'   (ne pas mettre les ' ')
+Cela permet de fixer le comportement au démarrage du programme :
+Raspberry : le programme est quitté immédiatement (utilse lorsque l'on a parametré le lancement automatique du programme au démarrage du Raspberry)
+Visio : le cadre photos n'est pas activé
+Photos : le cadre photos est activé
+
+Si vous ne respectez pas exactement l'une de ces 3 valeurs, le paramètre ne sera pas compris
 
