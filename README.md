@@ -112,6 +112,8 @@ Quelques paramètres du Raspberry à régler.
 ** Important : Le raspberry doit être configuré avec une résolution de 1280 x 720 ** (cf section "comment ça marche")
 --> Détails dans le fichier correpondant
 
+Les fichiers 'Screens' doivent être placés dans le répertoire /home/pi/Documents/Screens/
+
 Branchement des accessoires :
 - LED rouge = GPIO 16
 - Bouton Rouge = GPIO 17
