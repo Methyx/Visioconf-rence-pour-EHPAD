@@ -10,7 +10,8 @@ L'appel est automatiquement accepté au bout d'une quizaine de secondes, sauf si
 Un soignant a également la possibilité de bloquer les appels pendant 15 min à 1 heure pour lui permettre d’intervenir tranquillement (par simple appui sur le bouton rouge), puis sélection de la durée de blocage (bouton bleu) et validation (bouton jaune).
 La box est active dans une plage horaire paramétrable (par exemple de 10h00 à 19h00).
 Elle peut également faire cadre photo.
-Par contre, pour l'instant, il est impossible pour le senior de lancer lui-même un appel. Je vais travailler là-dessus prochainement (avec une télécommande ultra simple).
+
+Par contre, pour l'instant, il est impossible pour le senior de lancer lui-même un appel. Je vais travailler là-dessus prochainement (avec une télécommande ultra simple) ;-).
 
 
 === Le matériel :
@@ -69,6 +70,8 @@ Un journal d'appel est enregistré, et conservé, automatiquement : appels reçu
 
 Un journal système est également créé. Il est réinitialisé à chaque démarrage du programme (mais la version précédente est sauvegardée).
 
+Ha oui, et j'ai prévu un ventilateur qui se déclenche / s'arrete en fonction de la température CPU, car pendant les visios, ça chauffe un peu ! ;-)
+
 
 === Gestion à distance :
 
@@ -99,7 +102,21 @@ Si vous ne respectez pas exactement l'une de ces 3 valeurs, le paramètre ne ser
 
 === Les pré-requis
 
-A voir dans le fichier correspondant.
+Installer et paramétrer GoogleDuo.
+Quelques bibliothèques à installer.
+Quelques paramètres du Raspberry à régler.
+--> Détails dans le fichier correpondant
+
+Branchement des accessoires :
+- LED rouge = GPIO 16
+- Bouton Rouge = GPIO 17
+- LED bleue = GPIO 22
+- Bouton Bleu = GPIO 23
+- LED jaune = GPIO 24
+- Bouton Jaune = GPIO 25
+- Ventilateur = GPIO 18
+- Recepteur IR = GPIO 26
+- Emetteur IR = GPIO 05
 
 
 === Comment ça marche ?
