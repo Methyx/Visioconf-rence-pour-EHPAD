@@ -3,6 +3,8 @@ KIT_Box : Keep In Touch Box
 
 Une Box pour faire des visioconférences avec des personnes âgées dépendantes.
 
+Voir les photos dans le fichier "Photos Kit_Box.zip"
+
 
 === Le principe :
 
