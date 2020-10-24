@@ -1,0 +1,68 @@
+# Demarrage = 'Photos' pour activer le carde photos
+# Demarrage = 'Visio' pour desactiver le cadre photos
+# Demarrage = 'Raspberry' pour un retour direct au systeme Raspberry
+Demarrage
+     Visio
+#
+# Heure de reveil (exemple pour 9h00 = 900)
+Heure_Reveil
+     800
+#
+# Heure de mise en sommeil (exemple pour 19h00 = 1900)
+Heure_Sommeil
+     2300
+#
+# Temps de changement de photo dans le cadre photo (en secondes)
+Duree_Diapo
+     30
+#
+# Démarrage en plein écran = OUI/NON
+Plein_Ecran
+     NON
+#
+# Chemin contenant les fichiers .jpg du cadre photo
+Dossier_Photos
+     /home/pi/Pictures/CadrePhotos/
+#
+# Durée (en secondes) de la boite de dialogue pour refuser un appel
+Duree_Refus_Appel
+     15
+#
+# Prise HDMI du Raspberry sur la télé
+HDMI_Raspberry
+     1
+#
+# Mode_TV = Ecran : Fonctionnement sur un écran dédié
+# Mode_TV = TV : Fonctionnement sur une télé 
+Mode_TV
+     TV
+#
+# Mode de commande de la télé pour le passage HDMI / TV
+# Attention : la gestion du power ON / OFF est toujours via le CEC HDMI
+# Commande_tele = CEC : Commande de la télé via le CEC de l'HDMI
+# Commande_tele = IR : Commande de la télé via la télécommande IR
+Commande_tele
+     IR
+# Nom de la télécommande IR de la télé
+Telecommande_tele
+     SamsungChambre
+# Liste des Commandes IR de la télé
+# (si plusieurs commandes sont nécessaires, séparer les commandes par une virgule)
+CommandeIR_tele_HDMI
+     KEY_COMPUTER
+CommandeIR_tele_TV
+     KEY_TV,KEY_UP,KEY_OK
+# Commande de MUTE télé dans le cas ou on est en mode Ecran (fonctionnement sur écran dédié)
+CommandeIR_tele_MUTE
+     KEY_MUTE
+#
+# Nom de la télécommande du Raspberry
+Telecommande_rasp
+     TelecommandeRaspberry
+#
+#
+Journal_Appels
+     /home/pi/Documents/JournalAppels.txt
+#
+Journal_Systeme
+     /home/pi/Documents/JournalSysteme.txt
