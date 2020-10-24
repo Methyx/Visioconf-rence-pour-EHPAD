@@ -109,12 +109,10 @@ Si vous ne respectez pas exactement l'une de ces 3 valeurs, le paramètre ne ser
 Installer et paramétrer GoogleDuo.
 Quelques bibliothèques à installer.
 Quelques paramètres du Raspberry à régler.
+Quelques fichiers à copier
 ** Important : Le raspberry doit être configuré avec une résolution de 1280 x 720 ** (cf section "comment ça marche")
---> Détails dans le fichier correpondant
 
-Les fichiers 'Screens' doivent être placés dans le répertoire /home/pi/Documents/Screens/.
-
-Créer un répertoire /home/pi/Documents/Screenshots/
+--> Détails dans le fichier "Installation Logicielle (Git).rtf"
 
 Branchement des accessoires :
 - LED rouge = GPIO 16
