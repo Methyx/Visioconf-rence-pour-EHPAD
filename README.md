@@ -17,6 +17,7 @@ Elle peut également faire cadre photo.
 
 Par contre, pour l'instant, il est impossible pour le senior de lancer lui-même un appel. Je vais travailler là-dessus prochainement (avec une télécommande ultra simple) ;-).
 
+Voir le "Guide Utilisation KIT_Box.pdf" pour plus de détails
 
 === Le matériel :
 
