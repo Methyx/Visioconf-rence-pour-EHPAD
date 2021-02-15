@@ -14,7 +14,7 @@ from pymouse import PyMouse
 import subprocess
 import psutil
 import pytesseract
-from lirc import Lirc
+import lirc
 
 #
 # ===== Procedures de gestion de la télé =====
@@ -503,7 +503,7 @@ led_rouge.write(0)
 led_bleu.write(0)
 led_jaune.write(0)
 
-ir = Lirc()
+ir = lirc.Client()
 
 # initialisation de la tele
 hdmi_rasp = int(parametres["HDMI_Raspberry"])
